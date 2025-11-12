@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Verification</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #333;
+    }
+
+    .wrapper {
+      width: 100%;
+      padding: 40px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 600px;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .header p {
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 30px 25px;
+      text-align: center;
+    }
+
+    .content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 30px;
+      font-size: 16px;
+      color: #fff !important;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(106, 17, 203, 0.4);
+    }
+
+    .footer {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 13px;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
+    .footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 22px;
+      }
+      .content p {
+        font-size: 15px;
+      }
+      .btn {
+        width: 100%;
+        padding: 14px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="header">
+        <h1>Verify Your Email</h1>
+        <p>Secure your account in just one click</p>
+      </div>
+
+      <div class="content">
+        <p>Hello there 👋</p>
+        <p>
+          Thank you for joining <strong>Webelite Builders</strong>!  
+          Please confirm your email address to activate your account.
+        </p>
+
+        <a href="http://localhost:5173/verify/{{token}}" target="_blank" class="btn">
+          Verify Email Now
+        </a>
+
+        <p style="margin-top: 25px; font-size: 14px; color: #999;">
+          If you didn’t sign up, please ignore this email.
+        </p>
+      </div>
+
+      <div class="footer">
+        &copy; 2025 Webelite Builders. All rights reserved.<br />
+        <a href="#">Privacy Policy</a> • <a href="#">Help</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
