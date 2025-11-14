@@ -14,8 +14,7 @@ import { Eye, EyeOff, Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { getData } from '@/context/userContext'
-import Google from "../assets/googleLogo.png"
+import { getData } from '../context/userContext.jsx'
 
 const Login = () => {
     const {setUser} = getData()
@@ -40,7 +39,7 @@ const Login = () => {
         console.log(formData);
         try {
             setIsLoading(true)
-            const res = await axios.post(`http://localhost:8000/user/login`, formData, {
+            const res = await axios.post(`http://localhost:3000/user/login`, formData, {
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -132,10 +131,6 @@ const Login = () => {
                                         ) : "Login"
                                     }
                                 </Button>
-                                <Button onClick={()=>window.open("http://localhost:8000/auth/google", "_self")} className='w-full' variant='outline'>
-                                    <img src={Google} alt="" className='w-5'/>
-                                    Login with Google
-                                    </Button>
                             </CardFooter>
                         </Card>
                     </div>
